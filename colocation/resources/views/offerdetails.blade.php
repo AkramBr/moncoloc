@@ -104,11 +104,7 @@
                                 <i class="fa fa-map"></i>Map
                             </a>
                         </li>
-                        <li role="presentation">
-                            <a href="#street-view-panel" aria-controls="street-view-panel" role="tab" data-toggle="tab">
-                                <i class="fa fa-street-view"></i>Street View
-                            </a>
-                        </li>
+                        
                     </ul>
 
                     <!-- Tab panes -->
@@ -116,14 +112,13 @@
                         <div role="tabpanel" class="tab-pane fade in active" id="simple-map-panel">
                             <div class="detail-map">
                                 <div class="map-position">
-                                    <div id="listing-detail-map"
-                                         data-transparent-marker-image="{{ asset('assets/img/transparent-marker-image.png')}}"
-                                         data-styles='[{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.government","elementType":"labels.text.fill","stylers":[{"color":"#b43b3b"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"lightness":"8"},{"color":"#bcbec0"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#5b5b5b"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7cb3c9"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#abb9c0"}]},{"featureType":"water","elementType":"labels.text","stylers":[{"color":"#fff1f1"},{"visibility":"off"}]}]'
-                                         data-zoom="15"
-                                         data-latitude="40.779995"
-                                         data-longitude="-73.969133"
-                                         data-icon="fa fa-coffee">
-                                    </div><!-- /#map-property -->
+                                  <iframe
+  width="100%"
+  height="350"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAr_S8VFq96I-q4jqwzF2ysvPXG8dd70vI
+    &q={{$offers->ville}},Tunisie" allowfullscreen>
+</iframe><!-- /#map-property -->
                                 </div><!-- /.map-property -->
                             </div><!-- /.detail-map -->
                         </div>

@@ -1,13 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="page-wrapper">
 
       
-
-
-
-
         <div class="main">
             <div class="outer-admin">
                 <div class="wrapper-admin">
@@ -20,7 +15,7 @@
 
                     <div class="sidebar-secondary-admin">
                         <ul>
-                         <li class="active">
+                         <li >
                                 <a href="{{ url('/admin')}}">
                                     <span class="icon"><i class="fa fa-tachometer"></i></span>
                                     <span class="title">Dashboard</span>
@@ -28,7 +23,7 @@
                                 </a>
                             </li>
 
-                            <li>
+                            <li  class="active">
                                 <a href="{{ url('/manage-users')}}">
                                     <span class="icon"><i class="fa fa-user"></i></span>
                                     <span class="title">Utilisateur </span>
@@ -75,72 +70,46 @@
                                         <div class="row">
                                             <div class="col-sm-12">
                                                 <div class="page-title">
-                                                    <h1>Bienvenue Admin</h1>
+                                                    <h1>Gestion d'utilisateur</h1>
                                                 </div><!-- /.page-title -->
 
                                                 
 
                                                 
 
-                                                
-                                                <div class="row">
-        <div class="col-sm-12 col-lg-6">
-            <h3>Derniers Utilisateurs <a href="{{ url('/manage-users')}}">Voir tout les utlisateurs <i class="fa fa-chevron-right"></i></a></h3>
+                                                <div class="background-white p20 mb50">
+                                                    <h2 class="page-title">Tout les utilisateurss</h2>
 
-            <div class="users">
-    <table class="table">
-        <tbody>
-            <tr>
-                <td><a class="user" href="#"><img src="{{ asset('img/product-6.jpg') }}" alt=""></a></td>
-                <td class="hidden-xs visible-sm visible-md visible-lg">
-                    <h2><a href="#">Fiona Wilson</a></h2>
-                    <h3>Last login: 28/07/1015 10:45</h3>
-                </td>
-                <td class="right">
-                    <a href="#" class="btn btn-xs btn-primary">Edit</a>
-                    <a href="#" class="btn btn-xs btn-danger">Remove</a>
-                </td>
-            </tr>
+                                                    <table class="table table-hover mb0">
+                                                        <caption></caption>
+                                                        <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>First Name</th>
+                                                            <th>Last Name</th>
+                                                            <th>Username</th>
+                                                            <th></th>
+                                                        </tr>
+                                                        </thead>
 
-            
-        </tbody>
-    </table>
-</div><!-- /.users -->
+                                                        <tbody>
+                                                         @foreach($users as $myuser)
 
-        </div><!-- /.col-* -->
+                                                        <tr>
+                                                            <th scope="row">1</th>
+                                                            <td>{{$myuser->id}}</td>
+                                                            <td>{{$myuser->name}}</td>
+                                                            <td>{{$myuser->email}}</td>
+                                                             <td class="right">
+                                                                <a href="#" class="btn btn-xs btn-primary">Edit</a>
+                                                                <a href="deleteuser/{{$myuser->id}}" class="btn btn-xs btn-danger">Remove</a>
+                                                            </td>
+                                                        </tr>
 
-        <div class="col-sm-12 col-lg-6">
-            <h3>Derniers offres <a href="{{ url('/manage-offers')}}">Voir tout les offres <i class="fa fa-chevron-right"></i></a></h3>
-
-            <div class="background-white p30 mb50">
-    <div class="cards-system">
-        
-
-        
-            
-            <div class="card-system">
-                <div class="card-system-inner">
-                    <div class="card-system-image" data-background-image="{{ asset('img/product-6.jpg') }}" style="background-image: url(&quot;{{ asset('img/product-6.jpg') }});">
-                        <a href="listing-detail.html"></a>
-                    </div><!-- /.card-system-image -->
-
-                    <div class="card-system-content">
-                        <h2><a href="listing-detail.html">Tasty Brazil Coffee</a></h2>
-                        <h3>Posted sever hours ago</h3>
-                        <a href="#" class="btn btn-primary btn-xs">Edit</a>
-                        <a href="#" class="btn btn-secondary btn-xs">Ban</a>
-                    </div>
-                </div>
-            </div><!-- /.card-system -->
-        
-            
-           
-        
-    </div><!-- /.cards-system -->
-</div>
-
-        </div><!-- /.col-* -->
-    </div>
+                                                    @endforeach
+                                                        </tbody>
+                                                    </table>
+                                                </div>
 
                                                
                                             </div>
@@ -162,4 +131,4 @@
                 </div><!-- /.wrapper-admin -->
             </div><!-- /.outer-admin -->
         </div><!-- /.main -->
-    </div>@endsection
+@endsection

@@ -2,7 +2,9 @@
 
 @section('content')
 
-    <div class="container" style="margin-top: 50px;">
+    <div class="main" >
+<div class="main-inner">
+            <div class="container">
 
         <div class="row">
             <div class="document-title">
@@ -60,7 +62,7 @@
 
                                                 <div class="form-group">
                                                     <select name="ville" class="form-control">
-                                                        <option>Location</option>
+                                                        <option>Ville</option>
                                                         <option>Tunis</option>
                                                         <option>Ariana</option>
                                                         <option>Bizerte</option>
@@ -98,9 +100,19 @@
                                                     <input class="form-control" type="text" name="adresse" placeholder="Addresse">
                                                 </div><!-- /.form-group -->
 
-                                                <div class="input-group">
-                                                    <span class="input-group-addon"><i class="fa fa-home"></i></span>
-                                                    <input class="form-control" type="text" placeholder="Nombre de Chambre" name="chambre">
+                                                   <div class="form-group">
+                                                    <select name="chambre" class="form-control">
+                                                        <option>Nombre de Chambre</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                        <option>6</option>
+                                                        <option>7</option>
+                                                        <option>8</option>
+                                                        <option>9</option>
+                                                    </select>
                                                 </div><!-- /.form-group -->
 
                                                 <div class="input-group">
@@ -115,7 +127,16 @@
                                             </div><!-- /.col-* -->
                                         </div><!-- /.row -->
                                     </div><!-- /.box -->
+<div class="background-white p30 mt30 mb30">
+    
+    <iframe
+  width="100%"
+  height="350"
+  frameborder="0" style="border:0"
+  src="https://google-developers.appspot.com/maps/documentation/javascript/examples/full/places-searchbox" allowfullscreen>
+</iframe>
 
+</div>
 
                                     <div class="background-white p30 mb30">
                                         <h3 class="page-title">Options</h3>
@@ -134,7 +155,7 @@
                                     </div>
 
                                     <div class="center">
-                                        <button type="submit" class="btn btn-primary btn-xl">Publier</button>
+                                        <button type="submit" class="btn btn-primary btn-md">Publier</button>
                                     </div><!-- /.center -->
 
                                 </div><!-- /.content -->
@@ -150,6 +171,7 @@
 
             </div>
         </div>
-
+</div>
+</div>
     </div>
 @endsection

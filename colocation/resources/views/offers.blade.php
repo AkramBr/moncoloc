@@ -45,7 +45,7 @@
                                     <div class="col-sm-12 col-md-4">
                                         <div class="form-group">
                                             <select class="form-control" title="Ville">
-                                                <option class="ville" id="Tunis">Tunis</option>
+                                                <option class="ville" id="Tunis"><a href="/?ville=Tunis">Tunis</a></option>
                                                 <option class="ville" id="Ariana">Ariana</option>
                                                 <option class="ville" id="Bizerte">Bizerte</option>
                                                 <option class="ville" id="Sousse">Sousse</option>
@@ -72,16 +72,15 @@
                                 <div class="row">
                                     <div class="col-sm-8">
                                         <div class="filter-actions">
-                                            <a href="/?type=Studio"><i class="fa fa-save"></i> Studio</a>
-                                            <a href="/?type=Appartement"><i class="fa fa-save"></i> Appartement</a>
-                                            <a href="/?type=Villa"><i class="fa fa-save"></i> Villa</a>
-                                            <a href="/offers"><i class="fa fa-close"></i> Reset Filter</a>
+                                            <a href="/offers/?type=Studio"><i class="fa fa-save"></i> Studio</a>
+                                            <a href="/offers/?type=Appartement"><i class="fa fa-save"></i> Appartement</a>
+                                            <a href="/offers/?type=Villa"><i class="fa fa-save"></i> Villa</a>
 
                                         </div><!-- /.filter-actions -->
                                     </div><!-- /.col-* -->
 
                                     <div class="col-sm-4">
-                                        <button type="submit" class="btn btn-primary">Redefine Search Result</button>
+                                        <a href="/offers" class="btn btn-primary pull-right"><i class="fa fa-close"></i> Reset Filter</a>
                                     </div><!-- /.col-* -->
                                 </div><!-- /.row -->
                             </form>

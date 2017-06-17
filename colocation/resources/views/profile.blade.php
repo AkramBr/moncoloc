@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container" style="margin-top: 50px">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <img src="/uploads/avatars/{{$user->avatar}}" style="height: 150px; width: 150px; float: left;  border-radius: 50%; margin-right: 25px;">
@@ -25,4 +25,8 @@
             </div>
         </div>
     </div>
+
+
+
+
 @endsection
