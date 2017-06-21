@@ -27,5 +27,25 @@ class UserController extends Controller
         return view('profile', array('user'=>Auth::user()));
     }
 
+    public function upadate_profile(Request $request){
+
+        if ($request->isMethod('post')){
+            $user = Auth::user();  
+            $user->name=$request->input('name');
+            $user->age=$request->input('age');
+            $user->email=$request->input('email');
+            $user->type=$phone->input('phone');
+            $user->save();
+            return redirect('profile');
+
+        }
+        else {
+            
+
+        return view('profile', array('user'=>Auth::user()));
+        }
+        
+    }
+
 
 }

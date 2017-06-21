@@ -3,44 +3,7 @@
 
 @section('content')
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-2">
-                <h2>Details</h2><br>
-                <form action="/publish" method="post" enctype="multipart/form-data">
-                    <div class="form-group col-md-9">
-                        {{ csrf_field() }}
-
-                            
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading">Adresse:</div>
-                                <div class="panel-body">{{$offers->adresse}}</div>
-                            </div>
-                            <div class="panel panel-default ">
-                                <div class="panel-heading ">Type</div>
-                                <div class="panel-body">{{$offers->type}}</div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">Prix</div>
-                                <div class="panel-body">{{$offers->prix}}<span>Dinar</span></div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">Description</div>
-                                <div class="panel-body">{{$offers->description}}</div>
-                            </div>
-
-
-
-
-
-                    </div>
-                </form>
-
-            </div>
-        </div>
-    </div>
-    <div class="container">
+    <br>    <div class="container">
         <div class="row detail-content">
             <div class="col-sm-7">
                 <div class="detail-gallery">
@@ -53,7 +16,7 @@
                     <ul class="detail-gallery-index">
                         <li class="detail-gallery-list-item active">
                             <a data-target="{{ asset('img/tmp/gallery-1.jpg')}}">
-                                <img src="{{ asset('tmp/gallery-1.jpg')}}" alt="...">
+                                <img src="{{ asset('img/tmp/gallery-1.jpg')}}" alt="...">
                             </a>
                         </li>
                         <li class="detail-gallery-list-item active">
@@ -94,7 +57,7 @@
                     </ul>
                 </div><!-- /.detail-gallery -->
 
-                <h2>We Are Here</h2>
+                <h2>Nous Sommes Içi</h2>
                 <div class="background-white p20">
 
                     <!-- Nav tabs -->
@@ -134,252 +97,31 @@
                     </div>
                 </div>
 
-                <h2>Video</h2>
+              <!--  <h2>Video</h2>
                 <div class="detail-video">
                     <iframe src="https://player.vimeo.com/video/36911719?color=009f8b&amp;byline=0&amp;portrait=0" width="653" height="366" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                </div><!-- /.detail-video -->
+                </div> /.detail-video -->
 
-                <h2 id="reviews">All Reviews</h2>
-                <div class="reviews">
-                    <div class="review">
-                        <div class="review-image">
-                            <img src="{{ asset('img/tmp/agent-1.jpg')}}" alt="">
-                        </div><!-- /.review-image -->
-
-                        <div class="review-inner">
-                            <div class="review-title">
-                                <h2>Nancy Collins</h2>
-
-                                <span class="report">
-                    <span class="separator">&#8226;</span><i class="fa fa-flag" title="Report" data-toggle="tooltip" data-placement="top"></i>
-                </span>
-
-                                <div class="review-overall-rating">
-                                    <span class="overall-rating-title">Total Score:</span>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-half-o"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </div><!-- /.review-rating -->
-                            </div><!-- /.review-title -->
-
-                            <div class="review-content-wrapper">
-                                <div class="review-content">
-                                    <div class="review-pros">
-                                        <p>Quisque aliquet ornare nunc in viverra. Nullam ornare molestie ligula in luctus. Suspendisse ac cursus elit. In congue mattis felis, non hendrerit orci dictum id.</p>
-                                    </div><!-- /.pros -->
-                                    <div class="review-cons">
-                                        <p>Duis et magna vel est tempus vehicula vitae sit amet enim. Sed vitae ligula congue.</p>
-                                    </div><!-- /.cons -->
-                                </div><!-- /.review-content -->
-
-                                <div class="review-rating">
-                                    <dl>
-                                        <dt>Food</dt>
-                                        <dd>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </dd>
-                                        <dt>Staff</dt>
-                                        <dd>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </dd>
-                                        <dt>Value</dt>
-                                        <dd>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </dd>
-                                        <dt>Atmosphere</dt>
-                                        <dd>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </dd>
-                                    </dl>
-                                </div><!-- /.review-rating -->
-                            </div><!-- /.review-content-wrapper -->
-
-                        </div><!-- /.review-inner -->
-                    </div><!-- /.review -->
-
-                    <div class="review">
-                        <div class="review-image">
-                            <img src="assets/img/tmp/agent-2.jpg" alt="">
-                        </div><!-- /.review-image -->
-
-                        <div class="review-inner">
-                            <div class="review-title">
-                                <h2>Kim Glove</h2>
-                                <span class="report">
-                    <span class="separator">&#8226;</span><i class="fa fa-flag" title="Report" data-toggle="tooltip" data-placement="top"></i>
-                </span>
-
-
-                                <div class="review-overall-rating">
-                                    <span class="overall-rating-title">Total Score:</span>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-half-o"></i>
-                                    <i class="fa fa-star-o"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </div><!-- /.review-rating -->
-                            </div><!-- /.review-title -->
-
-                            <div class="review-content-wrapper">
-                                <div class="review-content">
-                                    <div class="review-pros">
-                                        <p>Quisque aliquet ornare nunc in viverra. Nullam ornare molestie ligula in luctus.</p>
-                                    </div><!-- /.pros -->
-                                    <div class="review-cons">
-                                        <p>Suspendisse ac cursus elit. In congue mattis felis, non hendrerit orci dictum id. Duis et magna vel est tempus vehicula vitae sit amet enim. Sed vitae ligula congue.</p>
-                                    </div><!-- /.cons -->
-                                </div><!-- /.review-content -->
-
-                                <div class="review-rating">
-                                    <dl>
-                                        <dt>Food</dt>
-                                        <dd>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </dd>
-                                        <dt>Staff</dt>
-                                        <dd>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </dd>
-                                        <dt>Value</dt>
-                                        <dd>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </dd>
-                                        <dt>Atmosphere</dt>
-                                        <dd>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </dd>
-                                    </dl>
-                                </div><!-- /.review-rating -->
-                            </div><!-- /.review-content-wrapper -->
-
-                        </div><!-- /.review-inner -->
-                    </div><!-- /.review -->
-
-                    <div class="review">
-                        <div class="review-image">
-                            <img src="assets/img/tmp/agent-5.jpg" alt="">
-                        </div><!-- /.review-image -->
-
-                        <div class="review-inner">
-                            <div class="review-title">
-                                <h2>Richard Peterson</h2>
-                                <span class="report">
-                    <span class="separator">&#8226;</span><i class="fa fa-flag" title="Report" data-toggle="tooltip" data-placement="top"></i>
-                </span>
-
-                                <div class="review-overall-rating">
-                                    <span class="overall-rating-title">Total Score:</span>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div><!-- /.review-rating -->
-                            </div><!-- /.review-title -->
-
-                            <div class="review-content-wrapper">
-                                <div class="review-content">
-                                    <div class="review-pros">
-                                        <p>Quisque aliquet ornare nunc in viverra. Nullam ornare molestie ligula in luctus. Suspendisse ac cursus elit. In congue mattis felis, non hendrerit orci dictum id.</p>
-                                    </div><!-- /.pros -->
-                                    <div class="review-cons">
-                                        <p>Duis et magna vel est tempus vehicula vitae sit amet enim. Sed vitae ligula congue.</p>
-                                    </div><!-- /.cons -->
-                                </div><!-- /.review-content -->
-
-                                <div class="review-rating">
-                                    <dl>
-                                        <dt>Food</dt>
-                                        <dd>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </dd>
-                                        <dt>Staff</dt>
-                                        <dd>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </dd>
-                                        <dt>Value</dt>
-                                        <dd>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </dd>
-                                        <dt>Atmosphere</dt>
-                                        <dd>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </dd>
-                                    </dl>
-                                </div><!-- /.review-rating -->
-                            </div><!-- /.review-content-wrapper -->
-
-                        </div><!-- /.review-inner -->
-                    </div><!-- /.review -->
-
-                </div><!-- /.reviews -->
+           
 
             </div><!-- /.col-sm-7 -->
-
+            <h3>Propriétaire: <span class="text-secondary">{{$offers->prop}}</span></h3>
             <div class="col-sm-5">
 
                 <div class="background-white p20">
                     <div class="detail-overview-hearts">
-                        <i class="fa fa-heart"></i> <strong>213 </strong>people love it
+                        <i class="fa fa-calendar"></i> <strong>Publier le: </strong>{{$offers->created_at}}
                     </div>
                     <div class="detail-overview-rating">
-                        <i class="fa fa-star"></i> <strong>4.3 / 5 </strong>from <a href="#reviews">316 reviews</a>
+                        <i class="fa fa-dollar"></i> <strong>Prix: </strong>{{$offers->prix}}/mois
                     </div>
+                    <div class="detail-overview-rating">
+                        <i class="fa fa-dollar"></i> <strong>Prix: </strong>{{$offers->nuit}}/nuit
+                    </div>
+                    
 
                     <div class="detail-actions row">
-                        <div class="col-sm-4">
-                            <div class="btn btn-primary btn-book"><i class="fa fa-shopping-cart"></i> Book Now</div>
-                        </div><!-- /.col-sm-4 -->
+                        
                         <div class="col-sm-4">
                             <div class="btn btn-secondary btn-share"><i class="fa fa-share-square-o"></i> Share
                                 <div class="share-wrapper">
@@ -387,47 +129,39 @@
                                         <li><i class="fa fa-facebook"></i> Facebook</li>
                                         <li><i class="fa fa-twitter"></i> Twitter</li>
                                         <li><i class="fa fa-google-plus"></i> Google+</li>
-                                        <li><i class="fa fa-pinterest"></i> Pinterest</li>
-                                        <li><i class="fa fa-chain"></i> Link</li>
+                                       
                                     </ul>
                                 </div>
                             </div>
                         </div><!-- /.col-sm-4 -->
-                        <div class="col-sm-4">
-                            <div class="btn btn-secondary btn-claim"><i class="fa fa-hand-peace-o"></i> Claim</div>
-                        </div><!-- /.col-sm-4 -->
+                      
                     </div><!-- /.detail-actions -->
                 </div>
 
-                <h2>About <span class="text-secondary">Brazilian Coffe Taste</span></h2>
+                <h3>L'offre <span class="text-secondary">{{$offers->titre}}</span></h3>
                 <div class="background-white p20">
                     <div class="detail-vcard">
-                        <div class="detail-logo">
-                            <img src="{{ asset('img/tmp/pragmaticmates-logo.png')}}">
-                        </div><!-- /.detail-logo -->
+                        
 
                         <div class="detail-contact">
                             <div class="detail-contact-email">
-                                <i class="fa fa-envelope-o"></i> <a href="mailto:#">company@example.com</a>
+                                <i class="fa fa-envelope-o"></i> <a href="mailto:#">{{$offers->mail}}</a>
                             </div>
                             <div class="detail-contact-phone">
-                                <i class="fa fa-mobile-phone"></i> <a href="tel:#">+01-23-456-789</a>
+                                <i class="fa fa-mobile-phone"></i> <a href="tel:#">{{$offers->phone}}</a>
                             </div>
-                            <div class="detail-contact-website">
-                                <i class="fa fa-globe"></i> <a href="#">www.superlist.com</a>
-                            </div>
+                            
                             <div class="detail-contact-address">
                                 <i class="fa fa-map-o"></i>
-                                347/26 22nd Avenue<br>
-                                NYC AZ 85705, USA
+                                {{$offers->adresse}}<br>
+                                {{$offers->ville}},Tunisie
                             </div>
                         </div><!-- /.detail-contact -->
                     </div><!-- /.detail-vcard -->
 
                     <div class="detail-description">
-                        <p>Vestibulum a lectus ullamcorper, dapibus ante id, sagittis libero. In tincidunt nisi venenatis, ornare eros at, hendrerit sem. Nunc metus purus, porta a dignissim vel, vulputate sed odio. Aenean est nisi, pulvinar eget velit quis, placerat hendrerit arcu. Vestibulum non dictum nibh.</p>
-                        <p>In congue mattis felis, non hendrerit orci dictum id. Etiam consequat nulla vitae tempus interdum.Nam gravida convallis lacus, at dignissim urna pulvinar sed.</p>
-                        <p>Cras ac mi odio. Aliquam erat volutpat. Cras euismod facilisis ligula in tristique. Proin et eleifend lacus, vitae dictum orci</p>
+                        <p>{{$offers->description}}.</p>
+                       
                     </div>
 
                     <div class="detail-follow">
@@ -442,235 +176,34 @@
                     </div><!-- /.detail-follow -->
                 </div>
 
-                <div class="widget">
-                    <h2 class="widgettitle">Working Hours</h2>
-
-                    <div class="p20 background-white">
-                        <div class="working-hours">
-                            <div class="day clearfix">
-                                <span class="name">Mon</span><span class="hours">07:00 AM - 07:00 PM</span>
-                            </div><!-- /.day -->
-
-                            <div class="day clearfix">
-                                <span class="name">Tue</span><span class="hours">07:00 AM - 07:00 PM</span>
-                            </div><!-- /.day -->
-
-                            <div class="day clearfix">
-                                <span class="name">Wed</span><span class="hours">07:00 AM - 07:00 PM</span>
-                            </div><!-- /.day -->
-
-                            <div class="day clearfix">
-                                <span class="name">Thu</span><span class="hours">07:00 AM - 07:00 PM</span>
-                            </div><!-- /.day -->
-
-                            <div class="day clearfix">
-                                <span class="name">Fri</span><span class="hours">07:00 AM - 07:00 PM</span>
-                            </div><!-- /.day -->
-
-                            <div class="day clearfix">
-                                <span class="name">Sat</span><span class="hours">07:00 AM - 02:00 PM</span>
-                            </div><!-- /.day -->
-
-                            <div class="day clearfix">
-                                <span class="name">Sun</span><span class="hours">Closed</span>
-                            </div><!-- /.day -->
-                        </div>
-                    </div>
-                </div><!-- /.widget -->
+              
 
 
-                <h2>Amenities</h2>
+                <h2>Options</h2>
 
                 <div class="background-white p20">
                     <ul class="detail-amenities">
                         <li class="yes">WiFi</li>
-                        <li class="yes">Parking</li>
-                        <li class="no">Vine</li>
-                        <li class="yes">Terrace</li>
-                        <li class="no">Bar</li>
-                        <li class="yes">Take Away Coffee</li>
-                        <li class="no">Catering</li>
-                        <li class="yes">Raw Food</li>
-                        <li class="no">Delivery</li>
-                        <li class="yes">No-smoking room</li>
-                        <li class="no">Reservations</li>
+                        <li class="no">Parking</li>
+                        <li class="yes">Tv</li>
+                        <li class="yes">Cuisine</li>
+                        <li class="yes">Bain</li>
+                        <li class="no">Cimatisiation</li>
+                        <li class="yes">Meuble</li>
+                        <li class="no">Fumeur</li>
+                       
                     </ul>
                 </div><!-- /.detail-amenities -->
 
-                <h2>Enquire Form</h2>
+              
 
-                <div class="detail-enquire-form background-white p20">
-                    <form method="post" action="http://preview.byaviators.com/template/superlist/listing-detail.html?">
-                        <div class="form-group">
-                            <label for="">Name</label>
-                            <input type="text" class="form-control" name="" id="">
-                        </div><!-- /.form-group -->
 
-                        <div class="form-group">
-                            <label for="">Email <span class="required">*</span></label>
-                            <input type="email" class="form-control" name="" id="" required>
-                        </div><!-- /.form-group -->
-
-                        <div class="form-group">
-                            <label for="">Message <span class="required">*</span></label>
-                            <textarea class="form-control" name="" id="" rows="5" required></textarea>
-                        </div><!-- /.form-group -->
-
-                        <p>Required fields are marked <span class="required">*</span></p>
-
-                        <button class="btn btn-primary btn-block" type="submit"><i class="fa fa-paper-plane"></i>Send Message</button>
-                    </form>
-                </div><!-- /.detail-enquire-form -->
-
-                <h2>3 Reasons Why Choose Us</h2>
-
-                <div class="background-white p20 reasons">
-                    <div class="reason">
-                        <div class="reason-icon">
-                            <i class="fa fa-trophy"></i>
-                        </div><!-- /.reason-icon -->
-                        <div class="reason-content">
-                            <h4>Coffee House of the Year 2015</h4>
-                            <p>Fusce at venenatis lorem. Quisque volutpat aliquam leo, a pellentesque orci varius sit amet.</p>
-                        </div><!-- /.reason-content -->
-                    </div><!-- /.reason -->
-                    <div class="reason">
-                        <div class="reason-icon">
-                            <i class="fa fa-coffee"></i>
-                        </div><!-- /.reason-icon -->
-                        <div class="reason-content">
-                            <h4>High Quality Coffee Beans</h4>
-                            <p>Fusce at venenatis lorem. Quisque volutpat aliquam leo, a pellentesque orci varius sit amet.</p>
-                        </div><!-- /.reason-content -->
-                    </div><!-- /.reason -->
-                    <div class="reason">
-                        <div class="reason-icon">
-                            <i class="fa fa-cutlery"></i>
-                        </div><!-- /.reason-icon -->
-                        <div class="reason-content">
-                            <h4>Snacks & Deserts</h4>
-                            <p>Fusce at venenatis lorem. Quisque volutpat aliquam leo, a pellentesque orci varius sit amet.</p>
-                        </div><!-- /.reason-content -->
-                    </div><!-- /.reason -->
-                </div>
-
-                <div class="detail-payments">
-                    <h3>Accepted Payments</h3>
-
-                    <ul>
-                        <li><a href="#"><i class="fa fa-paypal"></i></a></li>
-                        <li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
-                        <li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
-                        <li><a href="#"><i class="fa fa-cc-stripe"></i></a></li>
-                        <li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
-                    </ul>
-                </div>
+               
             </div><!-- /.col-sm-5 -->
 
-            <div class="col-sm-12">
-                <h2>Submit a Review</h2>
-
-                <form class="background-white p20 add-review" method="post" action="http://preview.byaviators.com/template/superlist/listing-detail.html?">
-                    <div class="row">
-                        <div class="form-group col-sm-6">
-                            <label for="">Name <span class="required">*</span></label>
-                            <input type="text" class="form-control" id="" required>
-                        </div><!-- /.col-sm-6 -->
-
-                        <div class="form-group col-sm-6">
-                            <label for="">Email <span class="required">*</span></label>
-                            <input type="email" class="form-control" id="" required>
-                        </div><!-- /.col-sm-6 -->
-                    </div><!-- /.row -->
-
-                    <div class="row">
-                        <div class="form-group input-rating col-sm-3">
-
-                            <div class="rating-title">Food</div>
-
-                            <input type="radio" value="1" name="food" id="rating-food-1">
-                            <label for="rating-food-1"></label>
-                            <input type="radio" value="2" name="food" id="rating-food-2">
-                            <label for="rating-food-2"></label>
-                            <input type="radio" value="3" name="food" id="rating-food-3">
-                            <label for="rating-food-3"></label>
-                            <input type="radio" value="4" name="food" id="rating-food-4">
-                            <label for="rating-food-4"></label>
-                            <input type="radio" value="5" name="food" id="rating-food-5">
-                            <label for="rating-food-5"></label>
-
-                        </div><!-- /.col-sm-3 -->
-                        <div class="form-group input-rating col-sm-3">
-
-                            <div class="rating-title">Staff</div>
-
-                            <input type="radio" value="1" name="staff" id="rating-staff-1">
-                            <label for="rating-staff-1"></label>
-                            <input type="radio" value="2" name="staff" id="rating-staff-2">
-                            <label for="rating-staff-2"></label>
-                            <input type="radio" value="3" name="staff" id="rating-staff-3">
-                            <label for="rating-staff-3"></label>
-                            <input type="radio" value="4" name="staff" id="rating-staff-4">
-                            <label for="rating-staff-4"></label>
-                            <input type="radio" value="5" name="staff" id="rating-staff-5">
-                            <label for="rating-staff-5"></label>
-
-                        </div><!-- /.col-sm-3 -->
-                        <div class="form-group input-rating col-sm-3">
-
-                            <div class="rating-title">Value</div>
-
-                            <input type="radio" value="1" name="value" id="rating-value-1">
-                            <label for="rating-value-1"></label>
-                            <input type="radio" value="2" name="value" id="rating-value-2">
-                            <label for="rating-value-2"></label>
-                            <input type="radio" value="3" name="value" id="rating-value-3">
-                            <label for="rating-value-3"></label>
-                            <input type="radio" value="4" name="value" id="rating-value-4">
-                            <label for="rating-value-4"></label>
-                            <input type="radio" value="5" name="value" id="rating-value-5">
-                            <label for="rating-value-5"></label>
-
-                        </div><!-- /.col-sm-3 -->
-                        <div class="form-group input-rating col-sm-3">
-
-                            <div class="rating-title">Atmosphere</div>
-
-                            <input type="radio" value="1" name="atmosphere" id="rating-atmosphere-1">
-                            <label for="rating-atmosphere-1"></label>
-                            <input type="radio" value="2" name="atmosphere" id="rating-atmosphere-2">
-                            <label for="rating-atmosphere-2"></label>
-                            <input type="radio" value="3" name="atmosphere" id="rating-atmosphere-3">
-                            <label for="rating-atmosphere-3"></label>
-                            <input type="radio" value="4" name="atmosphere" id="rating-atmosphere-4">
-                            <label for="rating-atmosphere-4"></label>
-                            <input type="radio" value="5" name="atmosphere" id="rating-atmosphere-5">
-                            <label for="rating-atmosphere-5"></label>
-
-                        </div><!-- /.col-sm-3 -->
-                    </div><!-- /.row -->
-
-                    <div class="row">
-                        <div class="form-group col-sm-6">
-                            <label for="">Pros</label>
-                            <textarea class="form-control" rows="5" id=""></textarea>
-                        </div><!-- /.col-sm-6 -->
-                        <div class="form-group col-sm-6">
-                            <label for="">Cons</label>
-                            <textarea class="form-control" rows="5" id=""></textarea>
-                        </div><!-- /.col-sm-6 -->
-
-                        <div class="col-sm-8">
-                            <p>Required fields are marked <span class="required">*</span></p>
-                        </div><!-- /.col-sm-8 -->
-                        <div class="col-sm-4">
-                            <button class="btn btn-primary btn-block" type="submit"><i class="fa fa-star"></i>Submit Review</button>
-                        </div><!-- /.col-sm-4 -->
-                    </div><!-- /.row -->
-                </form>
-            </div><!-- /.col-* -->
+            
         </div><!-- /.row -->
 
     </div>
-
+<br>
 @endsection

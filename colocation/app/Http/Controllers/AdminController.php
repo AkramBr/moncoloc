@@ -24,4 +24,6 @@ class AdminController extends Controller
         $array= array('users'=>$users);
         return view('manage-users', $array);
     }
-}
+  
+   
+ }

@@ -20,51 +20,20 @@
 
                     <div class="col-sm-8 col-lg-12">
                         <div class="content">
-                            <form class="filter" method="post" >
+                            <form class="filter" method="post" action=" ">
                                 <div class="row">
-                                    <div class="col-sm-12 col-md-4">
+                                    <div class="col-md-10">
                                         <div class="form-group">
-                                            <input type="text" placeholder="Keyword" class="form-control">
+                                            <input type="text" placeholder="Keyword" class="form-control" name="term" id="term"> 
                                         </div><!-- /.form-group -->
+                                       
+                                    </div><!-- /.col-* -->
+                                     <div class="col-sm-2 center">
+                                        <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i>Checher</button>
                                     </div><!-- /.col-* -->
 
-                                    <div class="col-sm-12 col-md-4">
-                                        <div class="form-group">
-                                            <select class="form-control" title="Type">
-                                                <option class="type" id="all">Tout</option>
-                                                <option class="type" id="Studio">Studio</option>
-                                                <option class="type" id="Appartement">Appartement</option>
-                                                <option class="type" id="Villa">Villa</option>
-
-                                            </select>
-
-
-                                        </div><!-- /.form-group -->
-                                    </div><!-- /.col-* -->
-
-                                    <div class="col-sm-12 col-md-4">
-                                        <div class="form-group">
-                                            <select class="form-control" title="Ville">
-                                                <option class="ville" id="Tunis"><a href="/?ville=Tunis">Tunis</a></option>
-                                                <option class="ville" id="Ariana">Ariana</option>
-                                                <option class="ville" id="Bizerte">Bizerte</option>
-                                                <option class="ville" id="Sousse">Sousse</option>
-                                                <option class="ville" id="Monastir">Monastir</option>
-                                                <option class="ville" id="Sidi-Bouzid">Sidi-Bouzid</option>
-                                                <option class="ville" id="Gafsa">Gafsa</option>
-                                                <option class="ville" id="Mehdia">Mehdia</option>
-                                                <option class="ville" id="Sfax">Sfax</option>
-                                                <option class="ville" id="Gabes">Gabes</option>
-                                                <option class="ville" id="Kasserine">Kasserine</option>
-                                                <option class="ville" id="Jendouba">Jendouba</option>
-                                                <option class="ville" id="Tatouine">Tatouine</option>
-                                                <option class="ville" id="Ben-Arous"> Ben-Arous</option>
-                                                <option class="ville" id="Mannouba">Mannouba</option>
-                                                <option class="ville" id="Kairouan">Kairouan</option>
-                                                <option class="ville" id="Nabeul">Nabeul</option>
-                                            </select>
-                                        </div><!-- /.form-group -->
-                                    </div><!-- /.col-* -->
+                                    
+                                   
                                 </div><!-- /.row -->
 
                                 <hr>
@@ -72,15 +41,19 @@
                                 <div class="row">
                                     <div class="col-sm-8">
                                         <div class="filter-actions">
-                                            <a href="/offers/?type=Studio"><i class="fa fa-save"></i> Studio</a>
-                                            <a href="/offers/?type=Appartement"><i class="fa fa-save"></i> Appartement</a>
-                                            <a href="/offers/?type=Villa"><i class="fa fa-save"></i> Villa</a>
+                                            <b>Trier par Type :</b>
+                                            <a href="/offers/?type=Studio" style="margin-left: 5px"><i class="fa fa-home"></i>Studio</a>
+                                            <a href="/offers/?type=Appartement"><i class="fa fa-home"></i> Appartement</a>
+                                            <a href="/offers/?type=Villa"><i class="fa fa-home"></i> Villa</a>
+                                            <b> Trier par Prix :</b>
+                                            <a href="/offers/?sort=desc" style="margin-left: 5px"><i class="fa fa-arrow-down"></i> Desc</a>
+                                        <a href="/offers/?sort=asc" ><i class="fa fa-arrow-up"></i> Asc</a>
 
                                         </div><!-- /.filter-actions -->
                                     </div><!-- /.col-* -->
 
                                     <div class="col-sm-4">
-                                        <a href="/offers" class="btn btn-primary pull-right"><i class="fa fa-close"></i> Reset Filter</a>
+                                        <a href="/offers" class="btn btn-primary pull-right"><i class="fa fa-close"></i> Reset</a>
                                     </div><!-- /.col-* -->
                                 </div><!-- /.row -->
                             </form>
@@ -91,21 +64,21 @@
                                 <div class="card-row offre {{$myoffer->type}}">
                                     <div class="card-row-inner">
                                         <div class="card-row-image" data-background-image="{{ asset('img/product-6.jpg') }}">
-                                            <div class="card-row-label"><a href="listing-detail.html">{{$myoffer->type}}</a></div><!-- /.card-row-label -->
+                                            <div class="card-row-label"><a href="offerdetails/{{$myoffer->id}}">{{$myoffer->type}}</a></div><!-- /.card-row-label -->
 
-                                            <div class="card-row-price">{{$myoffer->prix}} / night</div><!-- -->
+                                            <div class="card-row-price">{{$myoffer->prix}} / Mois</div><!-- -->
 
                                         </div><!-- /.card-row-image -->
 
                                         <div class="card-row-body">
-                                            <h2 class="card-row-title"><a href="offerdetails/{{$myoffer->id}}">{{$myoffer->adresse}}</a></h2>
+                                            <h2 class="card-row-title"><a href="offerdetails/{{$myoffer->id}}">{{$myoffer->titre}}</a></h2>
                                             <div class="card-row-content"><p>{{$myoffer->description}}</p></div><!-- /.card-row-content -->
                                         </div><!-- /.card-row-body -->
 
                                         <div class="card-row-properties">
                                             <dl>
 
-                                                <dd>Prix</dd><dt>{{$myoffer->prix}} / Nuit</dt>
+                                                <dd>Prix</dd><dt>{{$myoffer->nuit}} / Nuit</dt>
 
 
 
@@ -133,15 +106,16 @@
 
 
 
-                            <div class="pager">
+                            <div class="center" style="font-size:16px">
+
                                 {{$offers->Links()}}
 
                             </div><!-- /.pagination -->
 
 
+
                         </div><!-- /.content -->
                     </div><!-- /.col-* -->
-
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </div><!-- /.main-inner -->

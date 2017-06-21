@@ -26,7 +26,7 @@
     <!-- Optional theme -->
 
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/favicon.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/favicon.png') }}">
 
     <!-- Latest compiled and minified JavaScript -->
 
@@ -169,10 +169,9 @@
 
             <div class="footer-bottom-right">
                 <ul class="nav nav-pills">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Terms &amp; Conditions</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="{{ url('/')}}">Home</a></li>
+                    
+                    <li><a href="{{ url('/contact')}}">Contact</a></li>
                 </ul><!-- /.nav -->
             </div><!-- /.footer-bottom-right -->
         </div><!-- /.container -->

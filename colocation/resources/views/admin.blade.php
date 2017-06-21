@@ -78,7 +78,44 @@
                                                     <h1>Bienvenue Admin</h1>
                                                 </div><!-- /.page-title -->
 
-                                                
+                                                <div class="row">
+        <div class="col-sm-12 col-lg-6">
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="statusbox">
+                        <h2>Total Users</h2>
+                        <div class="statusbox-content">
+                            <strong>{{$users->total()}}</strong>
+                            <span>Updated 27/04/2015</span>
+                        </div><!-- /.statusbox-content -->
+
+                        <div class="statusbox-actions">
+                            <a href="{{ url('/manage-users')}}"><i class="fa fa-eye"></i></a>
+                          
+                        </div><!-- /.statusbox-actions -->
+                    </div><!-- /.statusbox -->
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="statusbox">
+                        <h2>Total offers</h2>
+                        <div class="statusbox-content">
+                            <strong>{{$offers->total()}}</strong>
+                            <span>Updated 27/04/2015</span>
+                        </div><!-- /.statusbox-content -->
+
+                        <div class="statusbox-actions">
+                            <a href="{{ url('/manage-offers')}}"><i class="fa fa-eye"></i></a>
+                           
+                        </div><!-- /.statusbox-actions -->
+                    </div>
+                </div>
+            </div><!-- /.row -->
+        </div><!-- /.col-* -->
+
+      
+    </div>
 
                                                 
 
@@ -90,18 +127,20 @@
             <div class="users">
     <table class="table">
         <tbody>
+            @foreach($users as $user)
+
             <tr>
-                <td><a class="user" href="#"><img src="{{ asset('img/product-6.jpg') }}" alt=""></a></td>
+                <td><a class="user" href="#"><img src="/uploads/avatars/{{$user->avatar}}" alt=""></a></td>
                 <td class="hidden-xs visible-sm visible-md visible-lg">
-                    <h2><a href="#">Fiona Wilson</a></h2>
-                    <h3>Last login: 28/07/1015 10:45</h3>
+                    <h2><a href="#">{{ $user->name}}</a></h2>
+                    <h3>Membre Depuis: {{ $user->created_at}}</h3>
                 </td>
                 <td class="right">
                     <a href="#" class="btn btn-xs btn-primary">Edit</a>
                     <a href="#" class="btn btn-xs btn-danger">Remove</a>
                 </td>
             </tr>
-
+            @endforeach
             
         </tbody>
     </table>
@@ -117,7 +156,7 @@
         
 
         
-            
+            @foreach($offers as $myoffer)
             <div class="card-system">
                 <div class="card-system-inner">
                     <div class="card-system-image" data-background-image="{{ asset('img/product-6.jpg') }}" style="background-image: url(&quot;{{ asset('img/product-6.jpg') }});">
@@ -125,14 +164,15 @@
                     </div><!-- /.card-system-image -->
 
                     <div class="card-system-content">
-                        <h2><a href="listing-detail.html">Tasty Brazil Coffee</a></h2>
-                        <h3>Posted sever hours ago</h3>
+                        <h2><a href="">{{$myoffer->titre}}</a></h2>
+                        <h3>{{$myoffer->ville}}</h3>
+                        <h3>Créer le: {{$myoffer->created_at}}</h3>
                         <a href="#" class="btn btn-primary btn-xs">Edit</a>
                         <a href="#" class="btn btn-secondary btn-xs">Ban</a>
                     </div>
                 </div>
             </div><!-- /.card-system -->
-        
+         @endforeach
             
            
         

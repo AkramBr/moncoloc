@@ -109,6 +109,12 @@
                                                     @endforeach
                                                         </tbody>
                                                     </table>
+                                                    <div class="center" style="font-size:16px">
+
+                                                        {{$users->Links()}}
+
+                                                    </div>
+                                                    
                                                 </div>
 
                                                

@@ -14,7 +14,8 @@ use App\Offer;
 use App\User;
 
 Route::get('/', function () {
-    return view('home');
+    $offers = offer::paginate(8);
+    return view('home',compact('offers'));
 });
 
 Auth::routes();
@@ -23,7 +24,10 @@ Auth::routes();
 
 
 Route::get('/admin', function () {
-    return view('/admin');
+    $users = User::paginate(5);
+    $offers = offer::paginate(5);
+
+    return view('/admin',compact('users','offers'));
 })-> middleware('admin');
 
 Route::get('/profile', 'UserController@profile');
@@ -43,15 +47,7 @@ Route::get('/contact', function () {
 Route::get('/publish', 'OfferController@AddOffer');
 Route::post('/publish', 'OfferController@AddOffer');
 
-Route::get('/offers',function (){
-    if (request()->has('type')){
-        $offers = App\Offer::where('type', request('type'))->paginate(5)->appends('type', request('type'));
-    } 
-    {
-        $offers = App\Offer::paginate(5);
-    }
-    return view('/offers')->with('offers',$offers);
-});
+
 
 Route::get('/offers', 'OfferController@viewoffers');
 Route::post('/offers', 'OfferController@viewoffers');

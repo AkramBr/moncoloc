@@ -115,9 +115,14 @@
                                                     @endforeach
                                                         </tbody>
                                                     </table>
+                                                     <div class="center" style="font-size:16px">
+
+                                                        {{$offers->Links()}}
+
+                                                    </div>
                                                 </div>
 
-                                               
+                                              
                                             </div>
 
                                         </div>

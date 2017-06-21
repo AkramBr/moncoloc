@@ -9415,15 +9415,14 @@ h2.widgettitle {
   margin-right: 4px; }
 
 .detail-content .detail-overview-hearts, .detail-content .detail-overview-rating {
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 16px;
   margin-bottom: 10px; }
   .detail-content .detail-overview-hearts strong, .detail-content .detail-overview-rating strong {
     color: #363636;
-    font-size: 24px;
-    font-weight: 400; }
+    font-size: 18px;
+    font-weight: 200; }
   .detail-content .detail-overview-hearts i, .detail-content .detail-overview-rating i {
-    font-size: 24px;
+    font-size: 20px;
     margin-right: 5px; }
 
 .detail-content .detail-overview-hearts i {
@@ -9431,7 +9430,7 @@ h2.widgettitle {
 
 .detail-content .detail-overview-rating {
   border-bottom: 1px solid #e9e9e9;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-bottom: 15px; }
   .detail-content .detail-overview-rating i {
     color: #ffd925; }

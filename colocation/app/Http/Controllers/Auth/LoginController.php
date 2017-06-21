@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+use App\Offer;
+
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -31,7 +33,8 @@ class LoginController extends Controller
             return redirect()->intended('/admin');
         }
 
-        return redirect()->intended('/home');
+
+        return redirect()->intended('/');
     }
     /**
      * Create a new controller instance.

@@ -16,6 +16,7 @@ class CreateOffer extends Migration
         Schema::create('offers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('titre');
+            $table->string('prop');
             $table->string('adresse');
             $table->string('mail');
             $table->string('phone');
@@ -23,12 +24,12 @@ class CreateOffer extends Migration
             $table->string('type');
             $table->float('prix');
             $table->float('nuit');
-            $table->string('description');
-            $table->boolean('wifi')->nullable();
+            $table->longText('description');
+            $table->string('wifi')->nullable();
             $table->integer('chambre');
             $table->boolean('tv')->nullable();
             $table->boolean('fumeur')->nullable();
-            $table->boolean('mauble')->nullable();
+            $table->boolean('meuble')->nullable();
             $table->boolean('parking')->nullable();
             $table->boolean('cuisine')->nullable();
             $table->boolean('clim')->nullable();

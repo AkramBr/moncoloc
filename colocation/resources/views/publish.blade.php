@@ -37,7 +37,10 @@
                                     <div class="background-white p30 mb30">
                                         <h3 class="page-title">Description</h3>
                                         <div class="form-group">
-                                            <input name="titre" class="form-control" type="text" placeholder="Title">
+                                            <input name="titre" class="form-control" type="text" placeholder="Titre">
+                                        </div><!-- /.form-group -->
+                                        <div class="form-group">
+                                            <input name="prop" class="form-control" type="text" placeholder="Nom du propriétaire">
                                         </div><!-- /.form-group -->
 
                                         <div class="form-group">
