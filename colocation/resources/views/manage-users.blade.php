@@ -78,7 +78,7 @@
                                                 
 
                                                 <div class="background-white p20 mb50">
-                                                    <h2 class="page-title">Tout les utilisateurss</h2>
+                                                    <h2 class="page-title">Tous les utilisateurss</h2>
 
                                                     <table class="table table-hover mb0">
                                                         <caption></caption>
